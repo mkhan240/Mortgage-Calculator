@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"  tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_x="25dp"
+            android:layout_y="26dp"
+            android:background="#00F5F3F3"
+            android:text="Mortgage Loan"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="?attr/colorControlNormal"
+            android:textSize="34sp"
+            app:fontFamily="sans-serif-medium"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="3dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:translationY="40dp"
+        android:weightSum="2"
+        tools:layout_editor_absoluteY="26dp">>
+
+        <EditText
+            android:id="@+id/purchaseAmmounttxt"
+            android:layout_width="fill_parent"
+            android:layout_height="64dp"
+            android:layout_above="@+id/btnreset"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_x="32dp"
+            android:layout_y="116dp"
+            android:ems="10"
+            android:hint="Enter Purchase Price $:"
+            android:inputType="numberDecimal"
+            android:textColor="#FA0C0C0C"
+            android:textColorHint="#FA090808"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="6dp"
+            tools:layout_editor_absoluteY="71dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:translationY="80dp"
+        android:weightSum="2"
+        tools:layout_editor_absoluteY="26dp">>
+
+        <EditText
+            android:id="@+id/downPaymenttxt"
+            android:layout_width="fill_parent"
+            android:layout_height="64dp"
+            android:layout_above="@+id/btnreset"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_x="32dp"
+            android:layout_y="196dp"
+            android:ems="10"
+            android:hint="Enter Down-Payment Amount $:"
+            android:inputType="numberDecimal"
+            android:textColor="#FA111010"
+            android:textColorHint="#FA090808"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="5dp"
+            tools:layout_editor_absoluteY="135dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:translationY="120dp"
+        android:weightSum="2"
+        tools:layout_editor_absoluteY="26dp">>
+        app:layout_constraintBottom_toBottomOf="@+id/txtdownPayment"
+        app:layout_constraintTop_toBottomOf="@+id/txttop2">
+
+        <EditText
+            android:id="@+id/interestRatetxt"
+            android:layout_width="fill_parent"
+            android:layout_height="64dp"
+            android:layout_above="@+id/btnreset"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_x="34dp"
+            android:layout_y="282dp"
+            android:ems="10"
+            android:hint="Enter Annual Interest Rate In % :"
+            android:inputType="numberDecimal"
+            android:textColor="#FA0F0F0F"
+            android:textColorHint="#FA090808"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="217dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:translationY="160dp"
+        android:weightSum="2"
+        tools:layout_editor_absoluteY="26dp">
+        <SeekBar
+            android:id="@+id/loanDurationSeekBar"
+            android:layout_width="fill_parent"
+            android:layout_height="52dp"
+            android:translationY="20dp"
+            android:layout_x="26dp"
+            android:layout_y="376dp"
+            tools:layout_editor_absoluteX="45dp"
+            tools:layout_editor_absoluteY="586dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:translationY="220dp"
+        android:weightSum="2"
+        tools:layout_editor_absoluteY="26dp">
+
+        <TextView
+            android:id="@+id/loanDurationtxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loan Duration: 0"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="168dp"
+            tools:layout_editor_absoluteY="620dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:translationY="260dp"
+        android:weightSum="2"
+        tools:layout_editor_absoluteY="26dp">>
+
+        <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_x="40dp"
+            android:layout_y="451dp"
+            android:text="Calculate"
+            android:textSize="18sp"
+            android:translationX="20dp"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="503dp" />
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:translationX="40dp"
+            android:layout_x="40dp"
+            android:layout_y="451dp"
+            android:text="Reset"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="503dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:translationY="300dp"
+        android:weightSum="2"
+        tools:layout_editor_absoluteY="26dp">>
+
+        <TextView
+            android:id="@+id/txttop"
+            android:layout_width="fill_parent"
+            android:layout_height="64dp"
+            android:layout_x="31dp"
+            android:layout_y="556dp"
+            android:background="#00F5F3F3"
+            android:gravity="center"
+            android:text="Monthly Payment "
+            android:textColor="#0A0A0A"
+            android:textSize="25sp"
+            app:fontFamily="sans-serif-medium"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="594dp" />
+
+        <EditText
+            android:id="@+id/totaltxt"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/btncalculate"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_x="200dp"
+            android:layout_y="551dp"
+            android:gravity="center"
+            android:textColor="#F8070707"
+            android:textSize="24sp"
+            android:translationX="0dp"
+            android:translationY="0dp"
+            tools:layout_editor_absoluteX="207dp"
+            tools:layout_editor_absoluteY="337dp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
